@@ -9,7 +9,7 @@ const getHomes = async (req, res, next) => {
     
     res.status(200).send({data: listOfFound.slice(0,20)})
   } catch (error) {
-    next(createError(404, error));
+    next(error);
   }
 };
 
